@@ -5,3 +5,4 @@ server mysql
 user root
 password s123123
 
+request test
