@@ -13,6 +13,7 @@ services:
     working_dir: /var/www/
     volumes:
       - ./src:/var/www
+      - ./php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql  
     networks:
@@ -23,7 +24,7 @@ services:
     container_name: tools_php-nginx
     restart: unless-stopped
     ports:
-      - 80:80
+      - 8001:80
     volumes:
       - ./src:/var/www
       - ./nginx:/etc/nginx/conf.d 
@@ -60,7 +61,7 @@ services:
       - tools_php-network        
 
 volumes:
-  mysql_php:
+  mysql_php: {}
 
 networks:
   tools_php-network:

@@ -5,4 +5,8 @@ server mysql
 user root
 password s123123
 
-request test2
+
+src/public/index.php
+
+localhost:8000 app
+localhost:8001 pma
